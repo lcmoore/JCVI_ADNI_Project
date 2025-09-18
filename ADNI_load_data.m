@@ -7,23 +7,23 @@ addpath(genpath('/home/dale/matlab'));
 addpath("/space/broce-syn01/1/data/GWAS/xinwang/scripts") % AMD: What's needed from here? -- Iris: move functions needed to this directory
 
 % datasets 2025-01-31
-tbl_demo = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Demog/PTDEMOG.csv');
-tbl_dx = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Diagnosis/DXSUM.csv');
-tbl_mmse = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/MMSE.csv');
-tbl_moca = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/MOCA.csv');
-tbl_faq = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/FAQ.csv');
-tbl_cdr = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/CDR.csv');
-tbl_neurobat = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/NEUROBAT.csv');
-tbl_tau_csf = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Biomarker/UPENNBIOMK_ROCHE_ELECSYS.csv');
+tbl_demo = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Demog/PTDEMOG.csv'); % demographic dat
+tbl_dx = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Diagnosis/DXSUM.csv'); % diagnositc 
+tbl_mmse = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/MMSE.csv'); % minimental state examinations
+tbl_moca = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/MOCA.csv'); % a memory assessment of some kind, montreal cognitive assessment
+tbl_faq = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/FAQ.csv'); % functional activitives questionaire, 
+tbl_cdr = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/CDR.csv'); % the main one, clinical dementia rating
+tbl_neurobat = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Cognition/NEUROBAT.csv'); % neurobatery, 10 variables that are column based data
+tbl_tau_csf = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Biomarker/UPENNBIOMK_ROCHE_ELECSYS.csv'); % ...
 tbl_tau_plasma = readtable('/space/ceph/1/CMIG/ADNI/LAKE/Biomarker/ADNI4_PLASMA_BIOMARKER_DATA.csv');
-tbl_apoeres = readtable('/space/ceph/1/CMIG/ADNI/DATA/Genetic/APOE.csv');
-tbl_phs_eadb = readtable('/space/ceph/1/CMIG/ADNI/PHS/ADNI_EADB_PHS_20250130.csv');
-tbl_phs_desikan = readtable('/space/ceph/1/CMIG/ADNI/PHS/ADNI_DESIKAN_PHS.csv');
-tbl_tau = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_TAU_6MM.csv');
-tbl_taupvc = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_TAUPVC_6MM.csv');
-tbl_amyloid = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_AMY_6MM.csv'); % ib 06/25
-tbl_amysuvr = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/AMYLOID_DER.csv');
-fname_nqlq = '/space/ceph/1/CMIG/ADNI/NQLQ/measures_nqlq.mat';
+tbl_apoeres = readtable('/space/ceph/1/CMIG/ADNI/DATA/Genetic/APOE.csv'); % a genotype 
+tbl_phs_eadb = readtable('/space/ceph/1/CMIG/ADNI/PHS/ADNI_EADB_PHS_20250130.csv'); % genetic risk (polygenetic hazard score)
+tbl_phs_desikan = readtable('/space/ceph/1/CMIG/ADNI/PHS/ADNI_DESIKAN_PHS.csv'); % some different dataset
+tbl_tau = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_TAU_6MM.csv'); % PET TAU
+tbl_taupvc = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_TAUPVC_6MM.csv'); % pcv values from PET TAU
+tbl_amyloid = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/UCBERKELEY_AMY_6MM.csv'); % amyloid beta table
+tbl_amysuvr = readtable('/space/ceph/1/CMIG/ADNI/LAKE/PET/AMYLOID_DER.csv'); % amyloid 
+fname_nqlq = '/space/ceph/1/CMIG/ADNI/NQLQ/measures_nqlq.mat'; % neuroquant volumetric data, and lesion quant
 
 % parsed NQ and retain more variable (pICV, z-scores, etc)
 % good to check if NQ z-scores outperform lh+rh
